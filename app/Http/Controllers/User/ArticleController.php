@@ -72,7 +72,8 @@ class ArticleController extends Controller
     {
       return view('user.donations.from.create', [
         'donation'   => new Donation(),
-        'article'    => $article
+        'article'    => Article::find($article->id)
+        //באמצע פיתוח
       ]);
     }
 

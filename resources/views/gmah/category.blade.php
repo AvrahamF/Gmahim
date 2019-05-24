@@ -13,6 +13,7 @@
 					<p>{!!$article->description_short!!}</p>
 				</div>
 				<div class="col-sm-2">
+					<p>{{$article->id}}</p>
 					<a class="btn btn-outline-dark btn-lg btn-block" href="{{route('create.donation', $article)}}">תרום</a>
 				</div>
 			</div>

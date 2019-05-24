@@ -28,9 +28,4 @@ class Donation extends Model
     {
       return $this->belongsTo('App\Article', 'donation_for_article', 'id');
     }
-
-    public static function newDonation()
-    {
-      return new Donation();
-    }
 }

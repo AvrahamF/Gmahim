@@ -17,6 +17,7 @@ class DonationFromController extends Controller
      */
     public function index()
     {
+      //באמצע פיתוח
       return view('user.donations.from.index', [
         'donationsFrom' => Donation::where('donation_from_user', Auth::user()->id)
         ->with(['users'=>    function($query){
@@ -29,11 +30,7 @@ class DonationFromController extends Controller
         }])
         ->paginate(10)
       ]);
-    }
-
-    public function newDonation()
-    {
-      return new Donation();
+      //באמצע פיתוח
     }
 
     /**
@@ -41,9 +38,9 @@ class DonationFromController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Article $article)
+    public function create(Donation $donation)
     {
-
+        //
     }
 
     /**
